@@ -1,9 +1,0 @@
-<?php
-/**
- * Implements hook_user_login().
- *
- * @param $account
- */
-function rahul_user_login($account){
-  \Drupal::messenger()->addMessage('Thank you for logging in and welcome! by rahul');
-}

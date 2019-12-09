@@ -1,6 +1,0 @@
-name: Workspace Task
-description: Workspace task module which build in Drupal 8 by Rahul Choudhary.
-package: Custom
-type: module
-version: 1.0
-core: 8.x
