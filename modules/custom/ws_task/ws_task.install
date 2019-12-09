@@ -1,0 +1,131 @@
+<?php
+/**
+ * hook_schema
+ */
+function ws_task_schema() {
+	// Tasks Table
+  $schema['tasks'] = array(
+    'fields' => array(
+      'id'=>array(
+        'type'=>'serial',
+        'not null' => TRUE,
+      ),    
+      'parent_task' => array(
+        'description' => 'The id of parent task.',
+				'type' => 'int',
+				'not null' => TRUE,
+				'default' => 0,
+      ),          
+      'task_title' => array(
+        'description' => 'Name of Task.',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'task_description' => array(
+        'description' => 'Description of Task',
+        'type' => 'text',
+      ),      
+      'priority' => array(
+        'description' => 'The priority of task.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,        
+      ),  
+      'task_status' => array(
+        'description' => 'The task_status.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,         
+      ), 
+      'start_date' => array(
+        'description' => 'The personal code of this user.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+			'end_date' => array(
+        'description' => 'The personal code of this user.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),  
+			'completion_percentage' => array(
+        'description' => 'The percentage of of complete task.',
+        'type' => 'float',
+        'not null' => TRUE,
+        'default' => 0,
+      ),      
+      'created_by' => array(
+        'description' => 'Created By users uid for user.',
+				'type' => 'int',
+				'not null' => TRUE,
+				'default' => 0,
+      ),
+      'updated_by' => array(
+        'description' => 'Updated By users uid for user.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'created_at' => array(
+        'description' => 'Created at date/time.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'updated_at' => array(
+        'description' => 'Updated at date/time.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),  			
+    ),		
+    'primary key' => array('id'),
+  );  
+
+ 
+	// Assignee Table
+  $schema['task_assignees'] = array(
+    'fields' => array(
+      'id'=>array(
+        'type'=>'serial',
+        'not null' => TRUE,
+      ),  
+      'task_id' => array(
+        'description' => 'Id of task.',
+				'type' => 'int',
+				'not null' => TRUE,
+				'default' => 0,
+      ),	
+      'assignees' => array(
+        'description' => 'Assignees of task.',
+				'type' => 'int',
+				'not null' => TRUE,
+				'default' => 0,
+      ),   
+      'assigned_by' => array(
+        'description' => 'Task assigned by.',
+				'type' => 'int',
+				'not null' => TRUE,
+				'default' => 0,
+      ),   
+      'created_at' => array(
+        'description' => 'Created at date timestamp.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'updated_at' => array(
+        'description' => 'Updated at date timestamp.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),             					
+    ),
+    'primary key' => array('id'),
+  );  
+
+  return $schema;
+}

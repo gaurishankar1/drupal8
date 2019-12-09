@@ -1,0 +1,12 @@
+taskdashboard:
+  title: 'Task Dashboard'
+  decription: 'Access task dashboard.'
+viewtabulartask:
+  title: 'View Tabalur Task List'
+  decription: 'View Tabular Task List.'
+addtask:
+  title: 'Create new task'
+  decription: 'Assign permission to create new task.'   
+administrator:
+  title: 'Configuration form permission'
+  decription: 'Configuration form permission.' 

@@ -1,0 +1,4 @@
+services:
+  ws_task.repository:
+    class: Drupal\ws_task\Model\TaskRepository
+    arguments: ['@database', '@string_translation', '@messenger']

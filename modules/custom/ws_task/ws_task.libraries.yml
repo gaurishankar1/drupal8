@@ -1,0 +1,26 @@
+common_js_css: 
+  version: 1.x
+  css:
+    theme:
+      css/ws_task.css: {} 
+  js:
+    js/ws_task.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/drupalSettings 
+
+dashboard_js_css:    
+  version: 1.x
+  css:
+    theme:
+      css/ws_dashboard.css: {} 
+  js:
+    js/ws_dashboard.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/drupalSettings
+   
